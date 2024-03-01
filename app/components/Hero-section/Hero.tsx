@@ -26,11 +26,16 @@ const AnimatedTitleWrapper = styled.div`
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Adding a subtle shadow */
 
   & > div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Center vertically */
+    align-items: center; /* Center horizontally */
     height: 50%;
     overflow: hidden;
     position: absolute;
     width: 100%;
-  }
+}
+
 
   & > div div {
     padding: 2vmin 0;
@@ -44,8 +49,9 @@ const AnimatedTitleWrapper = styled.div`
 
   & > div.text-top {
     border-bottom: 1vmin solid #FFFFFF;
-    top: 0;
-  }
+    top: calc(50% - 9vmin); /* Adjust the position */
+}
+
 
   & > div.text-top div {
     animation: ${showTopText} 1.5s ease-in-out; /* Use ease-in-out timing function */
@@ -56,13 +62,16 @@ const AnimatedTitleWrapper = styled.div`
     font-size: 18vmin; /* Increase the font size of VJTI */
   }
 
-  & > div.text-top div span:first-child {
-    color: #FFFFFF;
-  }
+  & > div.text-top {
+    border-bottom: 1vmin solid #FFFFFF;
+    bottom: 75%;
+    transform: translateY(-75%);
+}
 
-  & > div.text-bottom {
+& > div.text-bottom {
     bottom: 0;
-  }
+}
+
 
   & > div.text-bottom div {
     animation: ${showBottomText} 1.5s ease-in-out; /* Use ease-in-out timing function */
@@ -86,9 +95,13 @@ const Hero = () => {
         <div className="relative">
             <div className="background-video">
                 <video autoPlay playsInline muted loop preload="auto" className="video">
-                    <source src="/video.mp4" type="video/mp4" />
-                    Your browser does not support the video tag.
-                </video>
+                                  <iframe width="560" height="315" src="https://imagekit.io/player/embed/digitalvjti/intro-social.mp4?thumbnail=https%3A%2F%2Fik.imagekit.io%2Fdigitalvjti%2Fintro-social.mp4%2Fik-thumbnail.jpg&updatedAt=1709297576328" title="ImageKit video player" frameBorder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share; fullscreen"> </iframe>
+
+    {/* Provide the correct URL of the video file in the src attribute */}
+    {/* <source src="https://imagekit.io/player/embed/digitalvjti/intro-social.mp4?thumbnail=https%3A%2F%2Fik.imagekit.io%2Fdigitalvjti%2Fintro-social.mp4%2Fik-thumbnail.jpg&updatedAt=1709297576328" type="video/mp4" />
+    Your browser does not support the video tag. */}
+</video>
+
                 <div className="overlay">
                     <div className="content">
                         <AnimatedTitleWrapper>
