@@ -14,6 +14,11 @@ const showBottomText = keyframes`
   100% { transform: translateY(0); }
 `;
 
+const showPhotoFrame = {
+  hidden: { opacity: 0, scale: 0 },
+  visible: { opacity: 1, scale: 1, transition: { duration: 0.5 } }
+};
+
 const AnimatedTitleWrapper = styled.div`
   color: #FFFFFF;
   font-family: Roboto, Arial, sans-serif;
@@ -36,52 +41,50 @@ const AnimatedTitleWrapper = styled.div`
     width: 100%;
 }
 
-
-  & > div div {
-    padding: 2vmin 0;
-    position: absolute;
-    animation-duration: 1.5s; /* Increase animation duration */
-  }
-
-  & > div div span {
-    display: block;
-  }
-
-  & > div.text-top {
-    border-bottom: 1vmin solid #FFFFFF;
-    top: calc(50% - 9vmin); /* Adjust the position */
+& > div div {
+  padding: 2vmin 0;
+  position: absolute;
+  animation-duration: 1.5s; /* Increase animation duration */
 }
 
+& > div div span {
+  display: block;
+}
 
-  & > div.text-top div {
-    animation: ${showTopText} 1.5s ease-in-out; /* Use ease-in-out timing function */
-    animation-delay: 0.5s;
-    animation-fill-mode: forwards;
-    bottom: 0;
-    transform: translateY(100%);
-    font-size: 18vmin; /* Increase the font size of VJTI */
-  }
+& > div.text-top {
+  border-bottom: 1vmin solid #FFFFFF;
+  top: calc(50% - 9vmin); /* Adjust the position */
+}
 
-  & > div.text-top {
-    border-bottom: 1vmin solid #FFFFFF;
-    bottom: 75%;
-    transform: translateY(-75%);
+& > div.text-top div {
+  animation: ${showTopText} 1.5s ease-in-out; /* Use ease-in-out timing function */
+  animation-delay: 0.5s;
+  animation-fill-mode: forwards;
+  bottom: 0;
+  transform: translateY(100%);
+  font-size: 18vmin; /* Increase the font size of VJTI */
+}
+
+& > div.text-top {
+  border-bottom: 1vmin solid #FFFFFF;
+  bottom: 75%;
+  transform: translateY(-75%);
 }
 
 & > div.text-bottom {
-    bottom: 0;
+  bottom: 0;
 }
 
-
-  & > div.text-bottom div {
-    animation: ${showBottomText} 1.5s ease-in-out; /* Use ease-in-out timing function */
-    animation-delay: 1s; /* Adjust animation delay */
-    animation-fill-mode: forwards;
-    top: 0;
-    transform: translateY(-100%);
-    font-size: 14vmin; /* Adjust the font size of Social Group */
-  }
+& > div.text-bottom div {
+  animation: ${showBottomText} 1.5s ease-in-out; /* Use ease-in-out timing function */
+  animation-delay: 1s; /* Adjust animation delay */
+  animation-fill-mode: forwards;
+  top: 0;
+  transform: translateY(-100%);
+  font-size: 14vmin; /* Adjust the font size of Social Group */
+}
 `;
+
 
 const Hero = () => {
     const scrollToSection = () => {
@@ -103,42 +106,42 @@ const Hero = () => {
 </video>
 
 
-  <div className="photo-frame" style={{ width: '450px', height: '250px', border: '2px solid black', overflow: 'hidden', position: 'absolute', top: '10px', left: '10px' }}>
+  <motion.div variants={showPhotoFrame} initial="hidden" animate="visible" className="photo-frame"  style={{ width: '450px', height: '250px', border: '2px solid black', overflow: 'hidden', position: 'absolute', top: '10px', left: '10px' }}>
     <img src="enthuimg.jpeg" alt="Photo 1" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
-  </div>
-  <div className="photo-frame" style={{ width: '350px', height: '250px', border: '2px solid black', overflow: 'hidden', position: 'absolute', top: '270px', left: '320px' }}>
+    </motion.div>
+  <motion.div variants={showPhotoFrame} initial="hidden" animate="visible" className="photo-frame" style={{ width: '350px', height: '250px', border: '2px solid black', overflow: 'hidden', position: 'absolute', top: '270px', left: '320px' }}>
     <img src="dlaimg.jpeg" alt="Photo 2" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
-  </div>
-  <div className="photo-frame" style={{ width: '200px', height: '250px', border: '2px solid black', overflow: 'hidden', position: 'absolute', top: '10px', left: '470px' }}>
+    </motion.div>
+  <motion.div variants={showPhotoFrame} initial="hidden" animate="visible" className="photo-frame" style={{ width: '200px', height: '250px', border: '2px solid black', overflow: 'hidden', position: 'absolute', top: '10px', left: '470px' }}>
     <img src="ecellimg.jpeg" alt="Photo 3" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
-  </div>
-  <div className="photo-frame" style={{ width: '300px', height: '445px', border: '2px solid black', overflow: 'hidden', position: 'absolute', top: '270px', left: '10px' }}>
+    </motion.div>
+  <motion.div variants={showPhotoFrame} initial="hidden" animate="visible" className="photo-frame" style={{ width: '300px', height: '445px', border: '2px solid black', overflow: 'hidden', position: 'absolute', top: '270px', left: '10px' }}>
     <img src="pratiimg.jpeg" alt="Photo 4" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
-  </div>
-  <div className="photo-frame" style={{ width: '250px', height: '350px', border: '2px solid black', overflow: 'hidden', position: 'absolute', top: '10px', left: '680px' }}>
+    </motion.div>
+  <motion.div variants={showPhotoFrame} initial="hidden" animate="visible" className="photo-frame" style={{ width: '250px', height: '350px', border: '2px solid black', overflow: 'hidden', position: 'absolute', top: '10px', left: '680px' }}>
     <img src="pratipaytm.jpeg" alt="Photo 5" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
-  </div>
-  <div className="photo-frame" style={{ width: '300px', height: '200px', border: '2px solid black', overflow: 'hidden', position: 'absolute', top: '10px', left: '940px' }}>
+    </motion.div>
+  <motion.div variants={showPhotoFrame} initial="hidden" animate="visible" className="photo-frame" style={{ width: '300px', height: '200px', border: '2px solid black', overflow: 'hidden', position: 'absolute', top: '10px', left: '940px' }}>
     <img src="pinklights.jpeg" alt="Photo 6" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
-  </div>
-  <div className="photo-frame" style={{ width: '200px', height: '300px', border: '2px solid black', overflow: 'hidden', position: 'absolute', top: '220px', left: '940px' }}>
+    </motion.div>
+  <motion.div variants={showPhotoFrame} initial="hidden" animate="visible" className="photo-frame" style={{ width: '200px', height: '300px', border: '2px solid black', overflow: 'hidden', position: 'absolute', top: '220px', left: '940px' }}>
     <img src="" alt="Photo 7" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
-  </div>
-  <div className="photo-frame" style={{ width: '540px', height: '180px', border: '2px solid black', overflow: 'hidden', position: 'absolute', top: '530px', left: '940px' }}>
+    </motion.div>
+  <motion.div variants={showPhotoFrame} initial="hidden" animate="visible" className="photo-frame" style={{ width: '540px', height: '180px', border: '2px solid black', overflow: 'hidden', position: 'absolute', top: '530px', left: '940px' }}>
     <img src="sabali.jpeg" alt="Photo 8" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
-  </div>
-  <div className="photo-frame" style={{ width: '350px', height: '180px', border: '2px solid black', overflow: 'hidden', position: 'absolute', top: '530px', left: '320px' }}>
+    </motion.div>
+  <motion.div variants={showPhotoFrame} initial="hidden" animate="visible" className="photo-frame" style={{ width: '350px', height: '180px', border: '2px solid black', overflow: 'hidden', position: 'absolute', top: '530px', left: '320px' }}>
     <img src="rangaimg2.jpeg" alt="Photo 2" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
-  </div>
-  <div className="photo-frame" style={{ width: '250px', height: '340px', border: '2px solid black', overflow: 'hidden', position: 'absolute', top: '370px', left: '680px' }}>
+    </motion.div>
+  <motion.div variants={showPhotoFrame} initial="hidden" animate="visible" className="photo-frame" style={{ width: '250px', height: '340px', border: '2px solid black', overflow: 'hidden', position: 'absolute', top: '370px', left: '680px' }}>
     <img src="photo5.jpg" alt="Photo 5" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
-  </div>
-  <div className="photo-frame" style={{ width: '330px', height: '300px', border: '2px solid black', overflow: 'hidden', position: 'absolute', top: '220px', right: '10px' }}>
+    </motion.div>
+  <motion.div variants={showPhotoFrame} initial="hidden" animate="visible" className="photo-frame" style={{ width: '330px', height: '300px', border: '2px solid black', overflow: 'hidden', position: 'absolute', top: '220px', right: '10px' }}>
     <img src="rangaimg.jpeg" alt="Photo 7" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
-  </div>
-  <div className="photo-frame" style={{ width: '230px', height: '200px', border: '2px solid black', overflow: 'hidden', position: 'absolute', top: '10px', right: '10px' }}>
+    </motion.div>
+  <motion.div variants={showPhotoFrame} initial="hidden" animate="visible" className="photo-frame" style={{ width: '230px', height: '200px', border: '2px solid black', overflow: 'hidden', position: 'absolute', top: '10px', right: '10px' }}>
     <img src="swachhimg.jpeg" alt="Photo 6" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
-  </div>
+    </motion.div>
 
 
 
