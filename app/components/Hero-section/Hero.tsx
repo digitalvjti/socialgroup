@@ -1,7 +1,8 @@
 'use client'
-import React from 'react';
 import { motion } from 'framer-motion';
 import styled, { keyframes } from 'styled-components';
+import React, { useState } from 'react';
+
 
 const showTopText = keyframes`
   0% { transform: translateY(100%); }
@@ -87,12 +88,27 @@ const AnimatedTitleWrapper = styled.div`
 
 
 const Hero = () => {
+
+  const [showTextAnimation, setShowTextAnimation] = React.useState(false);
+
     const scrollToSection = () => {
         const section = document.getElementById('technovanza');
         if (section) {
             section.scrollIntoView({ behavior: 'smooth' });
         }
     };
+
+    const handleImageHover = (e: React.MouseEvent<HTMLImageElement, MouseEvent>) => { // Specify the type of 'e' parameter
+      e.currentTarget.style.transform = 'scale(1.1)'; // Use 'currentTarget' instead of 'target' to avoid possible null/undefined error
+  };
+
+  const handleImageMouseOut = (e: React.MouseEvent<HTMLImageElement, MouseEvent>) => { // Specify the type of 'e' parameter
+      e.currentTarget.style.transform = 'scale(1)';
+  };
+
+    const handleTextAnimation = () => {
+             setShowTextAnimation(true); // Function to trigger text animation
+        };
 
     return (
         <div className="relative">
