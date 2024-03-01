@@ -12,7 +12,7 @@ const ECell = (props: Props) => {
         show:{height:'100%'}
     }
   return (
-    <div className='flex relative md:pl-10'>
+    <section id="ecell" className='flex relative md:pl-10'>
     {/* <img alt="" aria-hidden="true" width="2712" height="2712" className="absolute top-0 right-0 h-auto pointer-events-none" loading="lazy" decoding="async" src="https://github.githubassets.com/images/modules/site/home-campaign/bg-stars-1.webp" /> */}
     <div className='flex items-center flex-row relative'>
         <motion.div variants={lineVariant} initial='hidden' whileInView='show' viewport={{once:false}} transition={{duration:0.3}}  className='w-[3px] h-full increase origin-top'></motion.div>
@@ -87,12 +87,12 @@ const ECell = (props: Props) => {
                 {/* <div className='z-[1] inline-block rounded-full px-2 border-2 border-[#7ee787] relative font-medium bg-gradient-to-r from-[#7ee787] to-[#aff5b4] bg-clip-text text-transparent'>
                     <span className='font-semibold text-[12px]'>Did you know?</span>
                 </div> */}
-                <h3 className="text-[#33b3ae] mb-12 mt-3 lg:text-6xl md:text-5xl text-3xl font-medium">ECELL</h3>
+                <h3 className="text-[#33b3ae] mb-12 mt-3 lg:text-6xl md:text-5xl text-3xl font-medium">ECELL VJTI</h3>
                 {/* <p className="mb-3 md:text-xl text-base font-medium text-white">in developer productivity <br /> after three years with GitHub<sup>1</sup></p> */}
             </div>
         </motion.div>
     </div>
-</div>
+</section>
   )
 }
 

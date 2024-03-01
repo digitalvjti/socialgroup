@@ -111,6 +111,9 @@ const Technovanza = (props: Props) => {
         hidden: {height: 0},
         show:{height:'100%'}
     }
+
+    
+
   return (
     <section id="technovanza" className='flex relative md:pl-10'>
     {/* <img alt="" aria-hidden="true" width="2712" height="2712" className="absolute top-0 right-0 h-auto pointer-events-none" loading="lazy" decoding="async" src="https://github.githubassets.com/images/modules/site/home-campaign/bg-stars-1.webp" /> */}

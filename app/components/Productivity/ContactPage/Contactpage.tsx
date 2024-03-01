@@ -17,7 +17,7 @@ const ContentDigital = () => {
   };
 
   return (
-    <div>
+    <section id='contactus'>
       <h3 style={{ color: 'white', fontSize: '50px', textAlign: 'center', marginTop: '30px', marginBottom: '50px' }}>Contact Us</h3>
       <div style={{ display: 'flex', justifyContent: 'space-around', padding: '0 20px' }}>
         <VisibilitySensor onChange={onVisibilityChange}>
@@ -93,7 +93,7 @@ const ContentDigital = () => {
           </HoverCard>
         </VisibilitySensor>
       </div>
-    </div>
+    </section>
   );
 };
 

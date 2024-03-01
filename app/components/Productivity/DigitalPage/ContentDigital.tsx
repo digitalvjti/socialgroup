@@ -34,7 +34,7 @@ const ContentDigital = (props: Props) => {
   return (
     <HoverCard backgroundColor = '#FAF9F6' direction='' left='0'>
     <div className='md:flex flex-col md:space-y-20 flex-1 p-8 sm:p-10 lg:py-16 lg:pl-16 lg:pr-32 justify-between '>
-        <p className=" text-xl md:text-2xl mb-6 font-medium text-[#7d8590]"><span className='text-white font-medium'>Digital</span> is the one projecting VJTI's social life to the world, imbibe technology with tradition and are the backend of VJTI Social group</p>
+        <p className=" text-xl md:text-2xl mb-6 font-medium text-[#7d8590]"><span className='text-white font-medium'>Digital VJTI</span> is the one projecting VJTI's social life to the world, imbibe technology with tradition and are the backend of VJTI Social group</p>
         <div>
             <a onMouseEnter={() => setHoveredSite(true)} onMouseLeave={() => setHoveredSite(false)} href="" className=' md:text-xl text-white font-semibold inline-block'>
                 Visit Site
