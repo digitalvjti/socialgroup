@@ -34,7 +34,7 @@ const ContentTechnovanza = (props: Props) => {
   return (
     <HoverCard backgroundColor = '#33b3ae' direction='' left='0'>
     <div className='md:flex flex-col md:space-y-20 flex-1 p-8 sm:p-10 lg:py-16 lg:pl-16 lg:pr-32 justify-between '>
-        <p className=" text-xl md:text-2xl mb-6 font-medium text-[#7d8590]"><span className='text-white font-medium'>Technovanza</span> the premiere technical group initiative of the VJTI Social Group, is one of Asia's Largest Techno-Manegerial Festival.</p>
+        <p className=" text-xl md:text-2xl mb-6 font-medium text-[#7d8590]"><span className='text-white font-medium'>Technovanza</span> the premiere technical group initiative of the VJTI Social Group, is one of Asia&aposs Largest Techno-Manegerial Festival.</p>
         <div>
             <a onMouseEnter={() => setHoveredSite(true)} onMouseLeave={() => setHoveredSite(false)} href="https://technovanza.org/" className=' md:text-xl text-white font-semibold inline-block'>
                 Visit Site
