@@ -17,8 +17,19 @@ const showBottomText = keyframes`
 
 const showPhotoFrame = {
   hidden: { opacity: 0, scale: 0 },
-  visible: { opacity: 1, scale: 1, transition: { duration: 0.5 } }
+  visible: {
+    opacity: 1,
+    scale: 1,
+    transition: {
+      duration: 0.5,
+      delay: 0.2, // Add a slight delay for a stagger effect
+      type: 'spring', // Use spring animation for a more dynamic effect
+      stiffness: 100,
+      damping: 10,
+    },
+  },
 };
+
 
 const AnimatedTitleWrapper = styled.div`
   color: #FFFFFF;
@@ -94,17 +105,11 @@ const Hero = () => {
     const scrollToSection = () => {
         const section = document.getElementById('technovanza');
         if (section) {
-            section.scrollIntoView({ behavior: 'smooth' });
+            section.scrollIntoView({ behavior: 'instant' });
         }
     };
 
-    const handleImageHover = (e: React.MouseEvent<HTMLImageElement, MouseEvent>) => { // Specify the type of 'e' parameter
-      e.currentTarget.style.transform = 'scale(1.1)'; // Use 'currentTarget' instead of 'target' to avoid possible null/undefined error
-  };
-
-  const handleImageMouseOut = (e: React.MouseEvent<HTMLImageElement, MouseEvent>) => { // Specify the type of 'e' parameter
-      e.currentTarget.style.transform = 'scale(1)';
-  };
+    
 
     const handleTextAnimation = () => {
              setShowTextAnimation(true); // Function to trigger text animation
