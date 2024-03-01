@@ -102,18 +102,63 @@ const Hero = () => {
     Your browser does not support the video tag. */}
 </video>
 
+
+  <div className="photo-frame" style={{ width: '450px', height: '250px', border: '2px solid black', overflow: 'hidden', position: 'absolute', top: '10px', left: '10px' }}>
+    <img src="enthuimg.jpeg" alt="Photo 1" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+  </div>
+  <div className="photo-frame" style={{ width: '350px', height: '250px', border: '2px solid black', overflow: 'hidden', position: 'absolute', top: '270px', left: '320px' }}>
+    <img src="dlaimg.jpeg" alt="Photo 2" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+  </div>
+  <div className="photo-frame" style={{ width: '200px', height: '250px', border: '2px solid black', overflow: 'hidden', position: 'absolute', top: '10px', left: '470px' }}>
+    <img src="ecellimg.jpeg" alt="Photo 3" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+  </div>
+  <div className="photo-frame" style={{ width: '300px', height: '445px', border: '2px solid black', overflow: 'hidden', position: 'absolute', top: '270px', left: '10px' }}>
+    <img src="pratiimg.jpeg" alt="Photo 4" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+  </div>
+  <div className="photo-frame" style={{ width: '250px', height: '350px', border: '2px solid black', overflow: 'hidden', position: 'absolute', top: '10px', left: '680px' }}>
+    <img src="pratipaytm.jpeg" alt="Photo 5" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+  </div>
+  <div className="photo-frame" style={{ width: '300px', height: '200px', border: '2px solid black', overflow: 'hidden', position: 'absolute', top: '10px', left: '940px' }}>
+    <img src="pinklights.jpeg" alt="Photo 6" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+  </div>
+  <div className="photo-frame" style={{ width: '200px', height: '300px', border: '2px solid black', overflow: 'hidden', position: 'absolute', top: '220px', left: '940px' }}>
+    <img src="" alt="Photo 7" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+  </div>
+  <div className="photo-frame" style={{ width: '540px', height: '180px', border: '2px solid black', overflow: 'hidden', position: 'absolute', top: '530px', left: '940px' }}>
+    <img src="sabali.jpeg" alt="Photo 8" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+  </div>
+  <div className="photo-frame" style={{ width: '350px', height: '180px', border: '2px solid black', overflow: 'hidden', position: 'absolute', top: '530px', left: '320px' }}>
+    <img src="rangaimg2.jpeg" alt="Photo 2" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+  </div>
+  <div className="photo-frame" style={{ width: '250px', height: '340px', border: '2px solid black', overflow: 'hidden', position: 'absolute', top: '370px', left: '680px' }}>
+    <img src="photo5.jpg" alt="Photo 5" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+  </div>
+  <div className="photo-frame" style={{ width: '330px', height: '300px', border: '2px solid black', overflow: 'hidden', position: 'absolute', top: '220px', right: '10px' }}>
+    <img src="rangaimg.jpeg" alt="Photo 7" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+  </div>
+  <div className="photo-frame" style={{ width: '230px', height: '200px', border: '2px solid black', overflow: 'hidden', position: 'absolute', top: '10px', right: '10px' }}>
+    <img src="swachhimg.jpeg" alt="Photo 6" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+  </div>
+
+
+
                 <div className="overlay">
                     <div className="content">
-                        <AnimatedTitleWrapper>
-                            <div className="text-top">
-                                <div>                                                
-                                    <span>VJTI</span>
-                                </div>
-                            </div>
-                            <div className="text-bottom">
-                                <div>Social Group</div>
-                            </div>
-                        </AnimatedTitleWrapper>
+                    <AnimatedTitleWrapper>
+  <div className="text-top">
+    <div style={{ fontFamily: 'Arial, sans-serif', fontSize: '120px', fontWeight: 'bold', letterSpacing: '1px', textShadow: '2px 2px 4px rgba(0, 0, 0, 0.5)', WebkitTextStroke: '2px white' }}>
+      <span style={{ color: '#FFFFFF' }}>VJTI</span>
+    </div>
+  </div>
+  <div className="text-bottom">
+    <div style={{ fontFamily: 'Arial, sans-serif', fontSize: '100px', letterSpacing: '0.5px', textShadow: '2px 2px 4px rgba(0, 0, 0, 0.5)', WebkitTextStroke: '2px white' }}>
+      <span style={{ color: '#FFFFFF' }}>Social Group</span>
+    </div>
+  </div>
+</AnimatedTitleWrapper>
+
+
+
                         <motion.div
                             initial={{ opacity: 0 }}
                             animate={{ opacity: 1 }}
