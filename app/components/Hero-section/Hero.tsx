@@ -105,7 +105,7 @@ const Hero = () => {
     const scrollToSection = () => {
         const section = document.getElementById('technovanza');
         if (section) {
-            section.scrollIntoView({ behavior: 'instant' });
+            section.scrollIntoView({ behavior: 'smooth' });
         }
     };
 
